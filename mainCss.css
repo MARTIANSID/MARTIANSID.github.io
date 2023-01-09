@@ -102,6 +102,10 @@ select {
 .items > div > div{
     padding:5px;
     flex: 1.2;
-    border-radius: 10px;
+}
+
+.items > div > div > div{
+  width: 70px;
+  border-radius: 5px;
 }
 

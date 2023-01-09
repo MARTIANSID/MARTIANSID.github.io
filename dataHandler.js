@@ -45,12 +45,25 @@ function parseJsonData() {
 
                 if (key == "status") {
                     const ele = document.createElement('div')
-                    ele.innerHTML = value
+                    var innerElement = document.createElement('div');
+                    if (value == "Draft") {
+                        innerElement.style.backgroundColor = "rgb(246, 140, 147)"
+                    } else if (value == "Partial Payment") {
+                        innerElement.style.backgroundColor = "rgb(88, 88, 186)"
+                    } else if (value == "Paid") {
+                        innerElement.style.backgroundColor = "rgb(111, 142, 250)"
+                    }
+                    innerElement.style.color = "white"
+                    innerElement.style.width = "fit-content"
+
+                    innerElement.innerHTML = value
+                    ele.appendChild(innerElement)
                     itemInnerDiv.appendChild(ele)
                 } else {
                     const ele = document.createElement('p')
                     if (key == "date" || key == "due_date") 
                         value = formateDate(new Date(value))
+
 
                     ele.innerHTML = value
                     itemInnerDiv.appendChild(ele)
@@ -58,6 +71,9 @@ function parseJsonData() {
             }
             if (isFilterCheckPassed) 
                 itemElement.appendChild(itemInnerDiv)
+
+
+            
 
 
         });
@@ -111,8 +127,13 @@ function formateDate(date) {
     if (day < 10) 
         day = '0' + day;
     
+
+
     if (month < 10) 
         month = '0' + month;
+    
+
+
     return day + '/' + month + '/' + year;
 }
 
