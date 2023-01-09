@@ -97,7 +97,7 @@ select {
 
 .items > div :nth-child(5),
 .items > div :nth-child(6) {
-  color: #F9C9CD;
+  color:#F9C1C4; 
 }
 .items > div > div{
     padding:5px;

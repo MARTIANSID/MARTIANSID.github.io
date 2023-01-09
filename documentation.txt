@@ -11,7 +11,7 @@ The data from data.json is parsed and displayed on the screen by changing the in
 2)Show Data According to filter
 An object is maintained which contains all the filter data
 If user changes any filter data correspondingly the filter object data is changed by adding a "change" event listner
-After that the data is again parsed from the data.json and checks are applied based on the filter obejct data
+After that the data is again parsed from the data.json and checks are applied based on the filter object data
 
 3)Sort Data on the basis of the particular column
 A sortKey variable is maintained which is initially set to an empty string
