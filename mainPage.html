@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./mainCss.css" />
+  </head>
+  <body>
+    <!-- start of filter section -->
+    <div class="filter">
+      <div class="filter_heading"><h2>All Invoices</h2></div>
+      <div class="filter_options">
+        <div class="begin_date">
+          <h3>Begin Date</h3>
+          <div>
+            <input value="2022-01-01" id="begin_date" type="date" />
+          </div>
+        </div>
+        <div class="end_date">
+          <h3>End Date</h3>
+          <div><input value="2023-01-01" id="end_date" type="date" /></div>
+        </div>
+        <div class="status">
+          <h3>Status</h3>
+          <div>
+            <select id="status" class="status_select">
+              <option value="Any">Any</option>
+              <option value="Paid">Paid</option>
+              <option value="Partial Payment">Partial Payment</option>
+              <option value="Draft">Draft</option>
+            </select>
+          </div>
+        </div>
+        <div class="client_type">
+          <h3>Client</h3>
+          <div>
+            <select id="client_type" class="client_select">
+              <option value="in-state">In-State</option>
+              <option value="out-state">Out-State</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of filter section -->
+    <!--Start of Table Section-->
+    <div class="headers">
+      <div>Invoice</div>
+      <div>Client Name</div>
+      <div>Client Type</div>
+      <div>Date</div>
+      <div>Due Date</div>
+      <div>Total</div>
+      <div>Balance</div>
+      <div>Status</div>
+    </div>
+
+    <div class="items" id="main_items">
+      
+    </div>
+    <!--end of Table Section-->
+  </body>
+
+    <script type="text/javascript" src="./dataHandler.js"></script>
+</html>
